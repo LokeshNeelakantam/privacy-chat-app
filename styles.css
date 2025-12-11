@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #ececec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-container {
+    width: 350px;
+    height: 600px;
+    background: rgba(245, 242, 242, 0.297);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 14px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: #25D366;
+    padding: 15px;
+}
+
+.header h2 {
+    margin: 0;
+    color: white;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bubble {
+    max-width: 70%;
+    padding: 10px 14px;
+    border-radius: 20px;
+    position: relative;
+    opacity: 0;
+    animation: slideIn 0.3s forwards;
+}
+
+.user {
+    background: #DCF8C6;
+    align-self: flex-end;
+}
+
+.bot {
+    background: #cdc7c7;
+    border: 1px solid #ccc;
+    align-self: flex-start;
+}
+
+.input-area {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+input {
+    flex: 1;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+}
+
+button {
+    background: #25D366;
+    border: none;
+    padding: 0 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
